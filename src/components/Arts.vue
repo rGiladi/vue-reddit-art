@@ -112,10 +112,11 @@ export default {
         vm.imgReddit = 'https://www.reddit.com' + vm.urlsA[0].reddit
         vm.fixColsDifferences()
       }).then(function () {
-        vm.isLoading = false
+        setTimeout(function () {
+          vm.isLoading = false
+        }, 500)
       }).catch(function (err) {
         vm.$toast('Something went wrong... Try to refresh the page', 4000)
-        vm.isLoading = false
         console.log(err)
       })
     },
