@@ -11,6 +11,5 @@ export default new Router({
       name: 'Arts',
       component: Arts
     }
-  ],
-  mode: 'history'
+  ]
 })
