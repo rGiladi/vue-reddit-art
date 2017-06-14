@@ -180,6 +180,9 @@ export default {
       this.handleHover()
     }
   },
+  beforeCreate () {
+    this.$router.push('/')
+  },
   created () {
     var vm = this
     vm.loadImages()
