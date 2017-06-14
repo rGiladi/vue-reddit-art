@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Exploring reddit/r/art",
   "author": "Roy Giladi",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",

@@ -1,0 +1,33 @@
+<!DOCTYPE html><html dir=rtl lang=he-il><head><meta charset=utf-8><meta name=apple-mobile-web-app-capable content=yes><meta name=mobile-web-app-capable content=yes><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=Edge"><title>Reddit-Art-Inspiration</title><link href="https://fonts.googleapis.com/css?family=Work+Sans:700" rel=stylesheet><script src=https://use.fontawesome.com/dcb4b9f0c4.js></script><link href=/static/css/app.3176173860c9a73f4eeccaddf96affd9.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.a6161909caaa797f4cb7.js></script><script type=text/javascript src=/static/js/vendor.85faf581cfeba9536d69.js></script><script type=text/javascript src=/static/js/app.4098c3c2059a996e8bea.js></script></body><script>// Matches polyfill
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = 
+      Element.prototype.matchesSelector || 
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector || 
+      Element.prototype.oMatchesSelector || 
+      Element.prototype.webkitMatchesSelector ||
+      function(s) {
+          var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+              i = matches.length;
+          while (--i >= 0 && matches.item(i) !== this) {}
+          return i > -1;            
+      };
+  }
+
+  // Adding jQuery's parents functionality
+  Element.prototype.parents = function(selector) {
+    var elements = [];
+    var elem = this;
+    var ishaveselector = selector !== undefined;
+  
+    while ((elem = elem.parentElement) !== null) {
+      if (elem.nodeType !== Node.ELEMENT_NODE) {
+        continue;
+      }
+  
+      if (!ishaveselector || elem.matches(selector)) {
+        elements.push(elem);
+      }
+    }
+    return elements;
+  };</script></html>
