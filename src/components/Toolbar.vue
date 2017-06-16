@@ -132,6 +132,7 @@ function getOS () {
     text-align: left;
     z-index: 99999;
     cursor: pointer;
+    visibility: hidden;
   }
 
   #tools {

@@ -4,7 +4,7 @@ import Toolbar from '@/components/Toolbar'
 import Explore from '@/components/Explore'
 
 export default {
-  name: 'hello',
+  name: 'main',
   data () {
     return {
       isLoading: true,
