@@ -106,15 +106,19 @@ export default {
             }
           }
         }
-        vm.imageOn = vm.urlsA[0].src
-        vm.imgTitle = vm.urlsA[0].title
-        vm.imgAuthor = vm.urlsA[0].author
-        vm.imgReddit = 'https://www.reddit.com' + vm.urlsA[0].reddit
+        if (!vm.imageOn) {
+          vm.imageOn = vm.urlsA[0].src
+          vm.imgTitle = vm.urlsA[0].title
+          vm.imgAuthor = vm.urlsA[0].author
+          vm.imgReddit = 'https://www.reddit.com' + vm.urlsA[0].reddit
+        }
         vm.fixColsDifferences()
       }).then(function () {
-        setTimeout(function () {
-          vm.isLoading = false
-        }, 500)
+        if (vm.isLoading) { // Only on first call
+          setTimeout(function () {
+            vm.isLoading = false
+          }, 500)
+        }
       }).catch(function (err) {
         vm.$toast('Something went wrong... Try to refresh the page', 4000)
         console.log(err)
